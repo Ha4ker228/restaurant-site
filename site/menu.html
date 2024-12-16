@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню - Ресторан "Вкусный уголок"</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* Заголовок с зелёным фоном */
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 48px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Основной фон с изображением */
+        section {
+            text-align: center;
+            padding: 50px 20px;
+            background-image: url('https://static.sobaka.ru/images/image/00/77/53/98/_normal.jpg?v=1476190103'); /* Путь к картинке */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            height: 100vh; /* Растягиваем на весь экран */
+            position: relative;
+        }
+
+        /* Затемняем фон с помощью полупрозрачного слоя */
+        section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Черный полупрозрачный слой */
+            z-index: 1;
+        }
+
+        section h2 {
+            font-size: 48px;
+            color: #fff;
+            position: relative;
+            z-index: 2;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Добавляем тень для текста */
+        }
+
+        section p {
+            font-size: 20px;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); /* Добавляем тень для текста */
+        }
+
+        section img {
+            width: 80%;
+            max-width: 600px;
+            margin-top: 20px;
+            border-radius: 10px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Стили для списка меню */
+        .menu-list {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 30px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .menu-list li {
+            font-size: 22px;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); /* Добавляем тень для текста */
+        }
+
+        footer {
+            display: none; /* Убираем футер */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Меню - Ресторан "Вкусный уголок"</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="menu.html">Меню</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Наши блюда</h2>
+        <p>Мы предлагаем разнообразие блюд для любого вкуса. У нас есть как классические итальянские пиццы, так и авторские блюда, созданные нашими шеф-поварами.</p>
+        <img src="pizza-image.jpg" alt="Пицца">
+
+        <!-- Список меню с ценами в долларах -->
+        <ul class="menu-list">
+            <li>Пицца "Маргарита" — 9.33 USD</li>
+            <li>Пицца "Пепперони" — 10.67 USD</li>
+            <li>Пицца "Гавайская" — 11.20 USD</li>
+            <li>Паста "Карбонара" — 7.47 USD</li>
+            <li>Паста "Болоньезе" — 8.00 USD</li>
+            <li>Салат "Цезарь" — 6.67 USD</li>
+            <li>Напитки (соки, лимонады) — от 4.00 USD</li>
+        </ul>
+    </section>
+
+</body>
+</html>
